@@ -10,7 +10,7 @@
 typedef double T;
 
 // Define number of sub-interval
-constexpr auto n = 1'000U;
+constexpr auto n = 50'000U;
 
 // Define the arrays
 std::array<T, n + 1> x;
@@ -18,8 +18,8 @@ std::array<T, n + 1> f;
 
 // Define integral interval
 constexpr T a = 0;
-constexpr T b = 1.0;
-constexpr T h = 1.0;
+constexpr T b = 100.0;
+constexpr T h = (b-a)/n;
 
 // Define analytical solution
 T solution(const T& a, const T& b)
